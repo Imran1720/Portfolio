@@ -242,6 +242,7 @@ section {
 .skill-info h4{
   font-size: 2rem;
 }
+
 .skill-box {
   background: var(--main-color);
   color: var(--second-bg-color);
@@ -274,13 +275,18 @@ section {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: var(--second-bg-color);
   border: 2px solid var(--main-color);
   border-radius: 2rem;
   padding: 3rem;
+  min-height: 600px;
   transition: 0.3s;
   text-align: center;
   box-shadow: 0 0 5px var(--main-color);
+  
 }
 
 .project-card:hover {
@@ -299,8 +305,20 @@ section {
 }
 
 .project-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 1.6rem;
   text-align: justify;
+}
+.project-card a {
+  margin-top: 2rem;
+  display:grid; /* Needed for margin to apply */
+}
+.project-card .navigation{
+  margin-top: 2rem;
+  text-align: center;
 }
 
 /* ========== Contact ========== */
@@ -336,6 +354,7 @@ section {
 .contact .btn {
   max-width: 400px;
   width: 100%;
+  font-weight: 600;
   text-align: center;
   margin: 2rem auto; /* Top/bottom: 2rem, auto left/right to center */
   display: block;    /* Ensure it behaves like a block for margin auto */
@@ -464,6 +483,8 @@ section {
   .gradient-btn {
     display: none;
   }
+
+  
 }
 
 @media (max-width: 480px) {
@@ -472,7 +493,7 @@ section {
   }
 
   .project-card {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .home-content h1 {
@@ -483,9 +504,11 @@ section {
   .about-content h2 {
     font-size: 4rem;
   }
-  .skill-info h4 {
-    font-size: 2.4rem;
+
+  .skill-info h4{
+    font-size: 2rem;
   }
+
   #custom-alert .alert{
     display: none !important;
 } 
