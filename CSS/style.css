@@ -60,9 +60,9 @@ body {
 
 span {
   background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
-  -webkit-background-clip: text; /* Required for Chrome, Safari */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  -webkit-text-fill-color: transparent; /* Required for Chrome, Safari */
   color: transparent;
 }
 
