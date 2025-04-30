@@ -425,6 +425,13 @@ section {
   html {
     font-size: 56%;
   }
+  span {
+  background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+  -webkit-background-clip: text; /* Required for Safari/iOS */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Required for Safari/iOS */
+  color: transparent;
+}
 }
 
 @media (max-width: 768px) {
@@ -477,7 +484,13 @@ span {
   html {
     font-size: 48%;
   }
-
+span {
+  background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+  -webkit-background-clip: text; /* Required for Safari/iOS */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Required for Safari/iOS */
+  color: transparent;
+}
   .project-card {
     padding: 2rem;
   }
