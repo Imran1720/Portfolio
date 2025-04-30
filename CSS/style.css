@@ -58,7 +58,7 @@ body {
   transform: scale(1.1);
 }
 
-span.gradient-text {
+span {
   background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
   -webkit-background-clip: text; /* Required for Chrome, Safari */
   background-clip: text;
