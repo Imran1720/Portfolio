@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "li0SXncHN-xqotfyT",
+      });
+   })();
+</script>
+
+<script src="./JavaScript/emailScript.js"></script>
+  </head>
+  <body>
+
+    <header class="header">
+      <a href="#home" class="logo">
+        Shaik <span>Imran</span> Ali
+      </a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact">
+
+        <button class="gradient-btn">Contact Me</button>
+      </a>
+
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi, It's <span>Imran</span></h1>
+        <h3>
+          I'm a <span>Game Developer</span>
+        </h3>
+       
+
+        <div class="social-icons">
+          <a href="https://github.com/Imran1720" target="_blank">
+            <i class="bx bxl-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/shaikimranali/" target="_blank">
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+
+          <a href="https://www.instagram.com/shaikimran4206/" target="_blank">
+            <i class='bx bxl-instagram-alt'></i>
+          </a>
+          
+        </div>
+
+        <div class="btn-group">
+          <a href="#" class="btn" target="_blank">Let's Connect</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="./References/Pics/image.png" alt="">
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="./References/Pics/image.png" alt="">
+      </div>
+      <div class="about-content">
+        <h2>About <span>Me</span></h2>
+        <p>Game programmer with a background in both development and game art, passionate about building responsive, engaging systems through clean, efficient code. Experience in UI, progression and unique power-up mechanics. I want to bring AAA-quality gameplay to mobile, making top-tier gaming experiences accessible to everyone, anywhere.</p>
+      
+        <a href="https://drive.google.com/file/d/1JXIxJBTRiUTINdBZN3W2jO6rOTL_A8yX/view?usp=sharing" download="" target="_blank" class="btn">Download CV <i class='bx bx-download'></i></a>
+      </div>
+
+    </section>
+
+    <section class="skills" id="skills">
+
+      <h2 class="heading">Skills</h2>
+      <div class="skills-container">
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Unity</h4>
+          </div>
+        </div>
+        
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>C++</h4>
+          </div>
+        </div>
+        
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>C#</h4>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Git</h4>
+          </div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Unreal Engine</h4>
+          </div>
+        </div>
+
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Asprite</h4>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Photoshop</h4>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Maya</h4>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Substance Painter</h4>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <div class="skill-info">
+            <h4>Zbrush</h4>
+          </div>
+        </div>
+      </div>
+        
+    </section>
+
+    <section class="projects" id="projects">
+
+      <h2 class="heading">Projects</h2>
+      <div class="projects-box">
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Sorting-Stick/refs/heads/main/Attachments/Quick_sort.gif" alt="">
+          <h3>Sorting Algorithms Visualization </h3>
+          <p>A fun and interactive project to learn and visualize six popular sorting algorithms using SFML. Each algorithm is visualized with comparisons, array accesses, and delay settings to better understand how sorting actually works!</p>
+         <div class="navigation" id="navigation">
+          <a href="https://github.com/Imran1720/Sorting-Stick" target="_blank">
+            <div class="btn">Source Code</div>
+          </a>
+           </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Searching-Stick/refs/heads/main/Attachment/Linear.gif" alt="">
+          <h3>Search Algorithm Visualizer </h3>
+          <p>Ever wondered how your computer finds files so fast, or how search engines deliver results within milliseconds? The secret lies in efficient searching algorithms. In this project, we visualize how Linear Search and Binary Search work — making abstract concepts easy to see and understand!</p>
+         <div class="navigation" id="navigation">
+          <a href="https://github.com/Imran1720/Searching-Stick" target="_blank">
+            <div class="btn" >Source Code</div>
+           </a>
+           </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Linked-List-Snake/refs/heads/main/Attachments/Gameplay.gif" alt="">
+          <h3>Classic Snake 2D</h3>
+          <p>Inspired by the iconic Snake game from the Nokia 3310 era, this project recreates the nostalgic experience with exciting new mechanics! Collect different foods, manage your snake’s size wisely, and survive as long as you can. Eat smart to maximize your score!</p>
+         <div class="navigation" id="navigation">
+          <a href="https://github.com/Imran1720/Linked-List-Snake" target="_blank">
+            <div class="btn" >Source Code</div>
+           </a>
+           </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Arrays-Minesweeper/Dev/Project-Setup/Attachments/Gameplay.gif" alt="">
+          <h3>Minesweeper</h3>
+          <p>Minesweeper is a classic logic-based puzzle game where your goal is to uncover all the safe tiles without detonating any hidden mines. Each number you reveal indicates how many mines are adjacent to that tile. By using logic and careful thinking, you can progressively clear the board while avoiding the mines. One wrong click, and it's game over!</p>
+         <div class="navigation" id="navigation">
+          <a href="https://github.com/Imran1720/Arrays-Minesweeper" target="_blank">
+            <div class="btn" >Source Code</div>
+           </a>
+           </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Unity-Github-Tutorial/main/Gameplay%20Gifs/Keyquest.gif" alt="">
+          <h3>KeyQuest</h3>
+          <p>In this 2D platformer, conquer five levels by collecting keys to unlock portals and progress. Avoid spikes and dodge patrolling enemies, with only three lives per level to survive. Do you have what it takes to beat every level and complete the game?
+            </p>
+           <div class="navigation" id="navigation">
+          <a href="https://outscal.com/skimran1720/game/play-keyquest-escape-from-the-monsters-lair-game-1" target="_blank">
+            <div class="btn" >Play Now</div>
+           </a>
+          <a href="https://github.com/Imran1720/KeyQuest-Escape-from-the-Monster-s-Lair" target="_blank">
+            <div class="btn" >Source Code</div>
+           </a>
+           </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Snake-2D/main/Attachments/Co-op.gif" alt="">
+          <h3>Snake-2D</h3>
+          <p>A classic Snake game built in Unity, featuring additional mechanics like power-ups, dynamic food effects, and a competitive co-op multiplayer mode. Players compete against each other in the co-op mode, where one player’s snake can eliminate the other by biting it. This game captures the nostalgic feel of the old keypad Snake game while adding exciting new twists and challenges.</p>
+         <div class="navigation" id="navigation">
+          <a href="https://outscal.com/skimran1720/game/play-snake-2d-game-1" target="_blank">
+            <div class="btn" >Play Now</div>
+           </a>
+          <a href="https://github.com/Imran1720/Snake-2D" target="_blank">
+            <div class="btn" >Source Code</div>
+           </a>
+           </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Unity-Github-Tutorial/main/Gameplay%20Gifs/Bizarre%20Quirk.gif" alt="">
+          <h3>Bizarre-Quirk</h3>
+          <p>it’s a chaotic dungeon adventure where the player gains random power-ups that can either help or hinder them. The core loop involves collecting keys to open a door before a timer runs out, and navigating with only left-right movement while adapting to unpredictable powers.</p>
+         <div class="navigation" id="navigation">
+          <a href="https://outscal.com/skimran1720/game/play-bizarre-quirk-game" target="_blank">
+            <div class="btn" >Play Now</div>
+           </a>
+          <a href="https://github.com/Imran1720/Bizarre-Quirk" target="_blank">
+            <div class="btn" >Source Code</div>
+           </a>
+           </div>
+        </div>
+
+       
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/ConsoleMinesweeper/refs/heads/main/Output/Console%20Minesweeper.gif" alt="">
+          <h3>Minesweeper Console Game </h3>
+          <p>A classic Minesweeper game implemented in C++ with clean object-oriented design. Built as a console application, this game offers a smooth, interactive experience that mimics the traditional Minesweeper puzzle with randomized mines and cell opening logic.The first cell opened is always safe. The game automatically calculates the number of adjacent mines for each cell and displays it once the cell is opened.</p>
+          <a href="https://github.com/Imran1720/ConsoleMinesweeper" target="_blank">
+            <div class="btn" >Source Code</div>
+           </a>
+        </div>
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Pokemon/2a977a1679fcbef96ef0765ed09e7911cb7fb36a/Attachments/Pokemon.gif" alt="">
+          <h3>Pokémon Console Adventure</h3>
+          <p>In this text-based Pokémon adventure game, you start your journey with Professor Oak, choose your starter Pokémon (Charmander, Bulbasaur, or Squirtle), and set out on an adventure. You can battle wild Pokémon, heal at Pokémon Centers, attempt to challenge gyms (currently closed), or aim for the Pokémon League (locked for now). The game runs in a simple console interface with menu-driven choices and random encounters.</p>
+         <div class="navigation" id="navigation">
+          <a href="https://github.com/Imran1720/Pokemon" target="_blank">
+           <div class="btn" >Source Code</div>
+          </a>
+          </div>
+        </div>
+
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Mr_Blocks/main/Attachments/Mr.%20Blocks.gif" alt="">
+          <h3>Mr. Blocks</h3>
+          <p>Guide Mr. Blocks, a square hero, through maze-like dungeons filled with deadly Spike Balls in this 2D top-down arcade adventure. Use keyboard controls to navigate levels that grow harder with each stage. Chaotic power-ups bring unpredictable twists, challenging you to adapt and survive.</p>
+         <div class="navigation" id="navigation">
+          <a href="https://outscal.com/skimran1720/game/play-mr-blocks-5-game" target="_blank">
+            <div class="btn" >Play Now</div>
+           </a>
+          <a href="https://github.com/Imran1720/Mr_Blocks" target="_blank">
+            <div class="btn" >Source Code</div>
+           </a>
+           </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://raw.githubusercontent.com/Imran1720/Flappy-Bird/main/Attachments/Flappy%20Bird.gif" alt="">
+          <h3>Flappy Bird Clone</h3>
+          <p>The Flappy Bird 2D Clone is an addictive arcade game where you control a bird trying to navigate through pipes by tapping the screen to make it flap. The goal is to pass as many pipes as possible without hitting them. As you progress, the game gets faster and more challenging, testing your reflexes and patience.</p>
+          
+         <div class="navigation" id="navigation">
+            <a href="https://imranali.itch.io/flappybird" target="_blank">
+              <div class="btn" >Play Now</div>
+            </a>
+            <a href="https://github.com/Imran1720/Flappy-Bird" target="_blank">
+              <div class="btn" >Source Code</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      
+      <form onsubmit="sendMail(event)">
+
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="John Smith" id="name" required>
+            <input type="email" placeholder="John@gmail.com" id="email" required>
+          </div>
+
+          <div class="input-box">
+            <input type="number" placeholder="+1 (555) 123-4567" id="phone" required>
+            <input type="text" placeholder="Subject" id="subject">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <textarea name="" placeholder="Message" cols="30" rows="10" id="message" required></textarea>
+          <input type="submit" value="Send Message" class="btn" onclick="sendMail(); return false;">
+          
+        </div>
+      </form>
+      
+    </section>
+    
+
+    <footer class="footer">
+
+      <div class="social-icons">
+        <a href="https://github.com/Imran1720" target="_blank">
+          <i class="bx bxl-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/shaikimranali/" target="_blank">
+          <i class="bx bxl-linkedin-square"></i>
+        </a>
+
+        <a href="https://www.instagram.com/shaikimran4206/" target="_blank">
+          <i class='bx bxl-instagram-alt'></i>
+        </a>
+        
+      </div>
+
+      <ul class="list">
+        <li><a href="#home">FAQ</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">
+        © Shaik Imran Ali 
+      </p>
+    </footer>
+    
+    <div id="custom-alert" class="hidden">
+      <div id="custom-alert-box">
+        <p id="custom-alert-message">Sending...</p>
+        <button onclick="hideCustomAlert()">OK</button>
+      </div>
+    </div>
+    
+    <script src="./JavaScript/script.js"></script>
+    
+  </body>
+</html>
