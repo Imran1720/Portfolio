@@ -47,15 +47,26 @@ body {
   cursor: pointer;
 }
 
-.logo {
-  font-size: 3.2rem;
+.logo{
+  font-size: 3.5rem;
   color: var(--text-color);
   font-weight: 800;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover{
+  transform: scale(1.1);
 }
 
-.logo:hover {
-  transform: scale(1.1);
+span{
+  background: linear-gradient(
+    270deg,
+    #DF8908 10%,
+    #ff1d15 100%
+  );
+  background-clip: text;
+  color: transparent;
+
 }
 
 .navbar a {
