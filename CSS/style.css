@@ -615,3 +615,76 @@ background: var(--second-bg-color);
  
 }
 
+
+@media (max-width: 480px) {
+  #menu-icon{
+   display: block;
+  }
+  .navbar {
+   position: absolute;
+   top: 100%;
+   right: 0;
+   width: 50%;
+   padding: 1rem 3rem;
+   background: rgba(0, 0, 0, 0.8);
+   border-bottom-left-radius: 2px solid var(--main-color);
+   border-bottom: 2px solid var(--main-color);
+   border-left: 2px solid var(--main-color);
+   display: none;
+   flex-direction: column;
+   padding: 2rem;
+ }
+ 
+ 
+ .navbar.active {
+   display: flex;
+ }
+ 
+   #menu-icon {
+     display: block;
+   }
+  .home{
+   flex-direction: column-reverse;
+   margin: 5rem 0;
+   gap : 5rem;
+  }
+  .home-content{
+   align-items: center;
+   text-align: center;
+  }
+  .home-img img{
+   width: 56vw;
+  }
+  .about{
+   flex-direction: column-reverse;
+   text-align: center;
+  }
+  .about h2{
+   text-align: center;
+   margin: 2rem 0;
+  }
+  .about img{
+   width: 52vw;
+  }
+  
+  .timeline-items::before{
+   left: 5px;
+  }
+  .timeline-item:nth-child(odd){
+   padding-right: 0;
+   text-align: left;
+  }
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even){
+   padding-left: 37px;
+  }
+  .timeline-dot{
+   left: 0;
+  }
+  
+  .contact form{
+   flex-direction: column;
+  }
+ 
+  
+ }
