@@ -1039,6 +1039,7 @@ background: var(--second-bg-color);
 
   .radial-bar .percentage {
     font-size: 14px;
+     top: 85%;
   }
 
   .radial-bar .text {
