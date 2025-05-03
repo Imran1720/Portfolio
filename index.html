@@ -27,7 +27,7 @@
 
     <header class="header">
       <a href="#home" class="logo">
-        Shaik <span>Imran</span> Ali
+        Shaik <span class="gradient-text">Imran</span> Ali
       </a>
 
       <i class="bx bx-menu" id="menu-icon"></i>
@@ -45,10 +45,14 @@
 
     <section class="home" id="home">
       <div class="home-content">
-        <h1 class="name">Hi, It's <span>Imran</span></h1>
-        <div class="text-animation-box">
+        <h1 class="name">Hi, It's <span class="gradient-text">Imran</span></h1>
+        <div class="home-info">
           <h3>
-            I'm a <span id="typingText" >Game Developer</span>
+            I'm a 
+            <span style="--i:4" data-text="Game Developer">Game Developer</span>
+            <span style="--i:3" data-text="Game Artist">Game Artist</span>
+            <span style="--i:2" data-text="Game Developer">Game Developer</span>
+            <span style="--i:1" data-text="Game Artist">Game Artist</span>
           </h3>
         </div>
        
@@ -74,7 +78,11 @@
       </div>
 
       <div class="home-img">
-        <img src="./References/Pics/image.png" alt="">
+        <div class="img-box">
+          <div class="img-item">
+            <img src="./References/Pics/image.png" alt="">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -93,70 +101,122 @@
 
     <section class="skills" id="skills">
 
-      <h2 class="heading">Skills</h2>
+      <h2 class="heading">Technical Skills</h2>
       <div class="skills-container">
 
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info unity">
             <h4>Unity</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
         
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info cpp">
             <h4>C++</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
         
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info csharp">
             <h4>C#</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
 
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info git">
             <h4>Git</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info unreal">
             <h4>Unreal Engine</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
 
 
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info asprite">
             <h4>Asprite</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
 
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info photoshop">
             <h4>Photoshop</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
 
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info maya">
             <h4>Maya</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
 
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info substance">
             <h4>Substance Painter</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
 
         <div class="skill-box">
-          <div class="skill-info">
+          <div class="skill-info zbrush">
             <h4>Zbrush</h4>
+            <div class="progress-line"><span class="gradient-text"></span></div>
           </div>
         </div>
       </div>
+
+      <h2 class="heading">Professional Skills</h2>
+<div class="skills-container">
+      <div class="radial-bars">
+
+        <div class="radial-bar">
+          <div class="text"><span class="gradient-text">Creativity</span></div>
+         <svg x="0px" y ="0px" viewBox="0 0 200 200">
+          <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+          <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+         </svg>
+         <div class="percentage">80%</div>
+        </div>
         
+        <div class="radial-bar">
+          <div class="text"><span class="gradient-text">Communication</span></div>
+          <svg x="0px" y ="0px" viewBox="0 0 200 200">
+           <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+           <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">65%</div>
+         </div>
+
+         <div class="radial-bar">
+           <div class="text"><span class="gradient-text">Problem Solving</span></div>
+          <svg x="0px" y ="0px" viewBox="0 0 200 200">
+           <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+           <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">85%</div>
+         </div>
+
+         <div class="radial-bar">
+           <div class="text"><span class="gradient-text">Teamwork</span></div>
+          <svg x="0px" y ="0px" viewBox="0 0 200 200">
+           <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+           <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+          </svg>
+          <div class="percentage">80%</div>
+         </div>
+  
+</div>
+
     </section>
 
     <section class="education" id="education">
@@ -167,7 +227,7 @@
           <div class="timeline-dot"></div>
             <div class="timeline-date">2024-Present</div>
             <div class="timeline-content">
-              <h3>Full Stack <span>Game Developer</span></h3>
+              <h3>Full Stack <span class="gradient-text">Game Developer</span></h3>
             </div>
           
         </div>
@@ -176,7 +236,7 @@
           <div class="timeline-dot"></div>
             <div class="timeline-date">2022-24</div>
             <div class="timeline-content">
-              <h3>M.A. <span>Multimedia</span></h3>
+              <h3>M.A. <span class="gradient-text">Multimedia</span></h3>
             </div>
           
         </div>
@@ -185,7 +245,7 @@
           <div class="timeline-dot"></div>
             <div class="timeline-date">2018-22</div>
             <div class="timeline-content">
-              <h3>B.Tech. <span>Computer Science & Engineering</span></h3>
+              <h3>B.Tech. <span class="gradient-text">Computer Science & Engineering</span></h3>
             </div>
           
         </div>
@@ -342,7 +402,7 @@
     </section>
 
     <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
+      <h2 class="heading">Contact <span class="gradient-text">Me</span></h2>
       
       <form onsubmit="sendMail(event)">
 
