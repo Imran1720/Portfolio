@@ -60,7 +60,7 @@ body {
   transform: scale(1.1);
 }
 
-span {
+.gradient-text{
   background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -139,6 +139,7 @@ section {
 .home-content {
   flex: 1 1 45rem;
   display: flex;
+  text-align: left;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -149,7 +150,9 @@ section {
 }
 
 .home-content h3 {
+  display: inline-block;
   font-size: 3rem;
+  background: var(--bg-color);
 }
 
 .home-content p {
@@ -157,19 +160,103 @@ section {
   font-weight: 500;
 }
 
-.home-img img {
-  max-width: 100%;
-  width: 35vw;
+
+
+.home-img .img-box{
+  position: relative;
+  width: 32vw;
+  height: 32vw;
   border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background: conic-gradient(transparent,transparent,transparent,var(--main-color));
+  transform: rotate(0deg);
+  animation: rotate-border 10s linear infinite;
+}
+.home-img .img-box::after{
+  animation-delay: -5s;
+}
+@keyframes rotate-border{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.home-img .img-box .img-item{
+position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  border: .1px solid var(--bg-color);
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  object-fit: cover;
   mix-blend-mode: lighten;
-  transition: 0.4s;
 }
 
 .home-img img:hover {
   box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
 }
 
+.home-info h3 span{
+  box-shadow: none !important;
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  animation: display-text 16s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text{
+  25%,100%{
+    display: none;
+  }
+}
 
+.home-info h3 span::before{
+  content: attr(data-text);
+  position: absolute;
+  width: 0%;
+  background: linear-gradient(270deg, #DF8908 10%, #ff1d15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-right: 2px solid var(--main-color);
+  color: var(--main-color);
+  background-clip: text;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 4s linear infinite;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+@keyframes fill-text{
+ 10%,
+ 100%{
+  width: 0%;
+ }
+ 70%,
+ 90%{
+  width: 100%;
+ }
+}
 
 /* ========== Social Icons ========== */
 .social-icons a {
@@ -227,7 +314,6 @@ section {
   text-align: justify;
   margin: 2rem 0;
 }
-
 
 /* ========== Education Section ========== */
 .heading{
@@ -339,30 +425,213 @@ background: var(--second-bg-color);
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 2rem;
 }
+.skill-info {
+  position: relative; /* Add this */
+  width: 100%;
+  height: 100%;
+}
+
 .skill-info h4{
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0; /* Remove default margins */
+  position: relative; /* Position text absolutely */
+  top: 2rem; /* Distance from top */
+  left: 2rem; /* Distance from left */
+  
 }
 
 .skill-box {
-  background: var(--main-color);
-  color: var(--second-bg-color);
-  border-radius: 1rem;
-  border: 3px solid var(--main-color);
+  background: var(--bg-color);
+  color: var(--main-color);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
+  justify-content: flex-start; /* Changed from center */
+  align-items: flex-start; /* Changed from center */
+  height: 15rem;
+  padding: 2rem; /* Added padding */
+  position: relative; /* For absolute positioning of text */
   transition: 0.4s;
 }
+.skill-box .skill-info .progress-line {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background:none;/* Progress track */
+  border-radius: 10px;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  overflow: hidden; /* For smooth scaling */
+}
 
-.skill-box:hover {
-  background: var(--second-bg-color);
-  color: var(--main-color);
-  transform: scale(1.03);
-  box-shadow: 0 0 25px var(--main-color);
+.skill-box .skill-info .progress-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:  rgba(109, 109, 109, 0.425); 
+  animation: animate 1s ease-out forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.progress-line {
+  background: rgba(255, 255, 255, 0.1); /* Subtle track color */
+}
+.skill-box .skill-info .progress-line span{
+  height: 100%;
+  background: linear-gradient(270deg, #df8908 10%, #ff1d15 100%);
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s .5s ease-out forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.unity .progress-line span{
+  width: 70%;
+}
+.cpp .progress-line span{
+  width: 80%;
+}
+.csharp .progress-line span{
+  width: 70%;
+}
+.git .progress-line span{
+  width: 65%;
+}
+
+.unreal .progress-line span{
+  width: 55%;
+}
+
+.asprite .progress-line span{
+  width: 55%;
+}
+
+.photoshop .progress-line span{
+  width: 75%;
+}
+
+.maya .progress-line span{
+  width:75%;
+}
+
+.substance .progress-line span{
+  width: 65%;
+}
+.zbrush .progress-line span{
+  width: 55%;
+}
+
+
+.radial-bars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.radial-bars h2{
+  text-align: center;
+  font-size: 5rem;
+  color: var(--text-color);
+}
+.radial-bar {
+  width: 100%; /* Take full width of container */
+  height: 170px;
+  margin-top: 10%;
+  margin-bottom: 20%;
+  position: relative;
+}
+
+.radial-bars .radial-bar svg{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(-90deg);
+  width: 220px;
+  height: 260px;
+}
+
+.radial-bars .radial-bar .progress-bar{
+  stroke-width: 10;
+  stroke: black;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar{
+  100%{
+    stroke-dashoffset: -1;
+  }
+}
+.path{
+  stroke-width: 10;
+  stroke: var(--main-color);
+  fill:transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.path-1{animation: animate-path1 1s  linear forwards;}
+.path-2{animation: animate-path2 1s  linear forwards;}
+.path-3{animation: animate-path3 1s  linear forwards;}
+.path-4{animation: animate-path4 1s  linear forwards;}
+
+
+
+@keyframes animate-path1{
+  100%{
+    stroke-dashoffset: 72;
+  }
+}
+@keyframes animate-path2{
+  100%{
+    stroke-dashoffset: 126;
+  }
+}
+@keyframes animate-path3{
+  100%{
+    stroke-dashoffset: 54;
+  }
+}
+@keyframes animate-path4{
+  100%{
+    stroke-dashoffset: 72;
+  }
+}
+.radial-bar .percentage{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5 1s linear forwards;
+  opacity: 0.5;
+}
+
+.radial-bar .text{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-weight: 600;
+  animation: showText 0.5s 1s linear forwards;
 }
 
 /* ========== Projects ========== */
@@ -430,7 +699,7 @@ background: var(--second-bg-color);
 }
 
 .contact h2 {
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -612,7 +881,45 @@ background: var(--second-bg-color);
   flex-direction: column;
  }
 
+ .skills h2,
+ .radial-bars h2 {
+   
+   margin-bottom: 3rem;
+ }
  
+ .skills-container {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.radial-bars {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-info h4 {
+  font-size: 2.5rem;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.skill-box {
+  height: auto;
+  padding: 1.5rem;
+}
+
+.radial-bars .radial-bar svg {
+  width: 180px;
+  height: 220px;
+  top: 85%;
+}
+
+.radial-bar .percentage {
+  font-size: 15px;
+}
+
+.radial-bar .text {
+  font-size: 2rem;
+}
 }
 
 
@@ -686,5 +993,58 @@ background: var(--second-bg-color);
    flex-direction: column;
   }
  
+  .skills h2,
+  .radial-bars h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  .education h2{
+    font-size: 4rem;
+  }
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .radial-bars {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .skill-info h4 {
+    font-size: 2rem;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .skill-box {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .skill-box .skill-info .progress-line {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+
+  .radial-bar{
+    margin-top: 10rem;
+  }
+ svg {
+    width: 150px;
+    height: 180px;
+    top: 80%;
+  }
+
+  .radial-bar .percentage {
+    font-size: 14px;
+  }
+
+  .radial-bar .text {
+    font-size: 1.8rem;
+    bottom: 1rem;
+  }
   
  }
+
