@@ -682,7 +682,7 @@ background: var(--second-bg-color);
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 1.6rem;
-  text-align: justify;
+  text-align: left;
 }
 .project-card a {
   margin-top: 2rem;
